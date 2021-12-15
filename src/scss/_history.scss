@@ -1,0 +1,197 @@
+$break-small: 1199px;
+.history-content-container{
+    position:relative; 
+    margin: 0 auto;
+    width: 640px;
+    min-height: 550px; 
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+        margin-top: 7vh; 
+    }
+}
+.history-nav{
+    width: 610px;
+    margin: 0 15px;
+    img{
+        width: 100%;
+    }
+    @media screen and (max-width: $break-small) {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+.history-content{
+    width: 610px;
+    margin: 0 15px;
+    background-color: $bgcolor;
+    padding: 20px;
+    .awardsContainer{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .awards{
+        width: 25%;
+        padding:5px;
+        img{
+            width: 100%;
+        }
+        p{
+            text-align: center;
+            color: $maintextcolor;
+            font-size: 14px;
+            @media screen and (max-width: $break-small) {
+                font-size: 1.8vw;
+            }
+        }
+    }
+    hr{
+        width:100%;
+        margin: 0;
+        border: none;
+    }
+    @media screen and (max-width: $break-small) {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+.history-video{
+    width:640px;
+    box-sizing: border-box;
+    background: #000;
+    border: 12px #757575 solid; 
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+    }
+    #video_player{
+        width: 616px;
+        height: 347px;
+        @media screen and (max-width: $break-small) {
+            width: 100%;
+            height: 53vw;
+        }
+    }
+   
+}
+.history-title{
+    text-align: center;
+    padding: 20px 20px 0 20px;
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+        img{
+            height: 4vw;
+        }
+    }
+}
+
+.slider-container{
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.bx-wrapper{
+    width: 80% !important; 
+    margin: 0 auto;
+    margin-bottom: 0px !important; 
+    -webkit-box-shadow: 0 0 0px !important;
+    box-shadow: 0 0 0px #ccc !important;
+    border: none !important;
+    background: none !important;
+}
+#slider-previous{
+    margin-right:5px;
+}
+#slider-next{
+    margin-left:5px;
+}
+
+.comingsoon {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.comingsoon .tooltiptext {
+    font-size: 14px;
+    visibility: hidden;
+    width: 87px;
+    height: 40px;
+    background: url(../../public/comingsoon.png) no-repeat 0 0; 
+    color: #fff;
+    text-align: center;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 60;
+    width: 87px;
+    top: 70%;
+    left: 50%; 
+    margin-left: -44px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.comingsoon:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+.advertorial{
+    .logo_apm{
+        background: url(../../public/history/logo_apm.png) no-repeat center center;
+    }
+    .logo_cityplaza{
+        background: url(../../public/history/logo_cityplaza.png) no-repeat center center;
+    }
+    .logo_dpark{
+        background: url(../../public/history/logo_dpark.png) no-repeat center center;
+    }
+    .logo_hollywood{
+        background: url(../../public/history/logo_hollywood.png) no-repeat center center;
+    }
+    .logo_moko{
+        background: url(../../public/history/logo_moko.png) no-repeat center center;
+    }
+    .logo_langham{
+        background: url(../../public/history/logo_langham.png) no-repeat center center;
+    }
+    .logo_telford{
+        background: url(../../public/history/logo_telford.png) no-repeat center center;
+    }
+    .logo_theone{
+        background: url(../../public/history/logo_theone.png) no-repeat center center;
+    }
+    .logo_vcity{
+        background: url(../../public/history/logo_vcity.png) no-repeat center center;
+    }
+    .modal-header{
+        display:flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        button{
+            margin: 0;
+        }
+    }
+    .modal-content{
+        background: $bgcolor; 
+    }
+    .modal-body{
+        padding:0;
+        .advertorialBody{
+            padding: 10px;
+            p{
+                font-family: Helvetica, 微軟正黑體, Verdana, Arial, sans-serif, 細明體_HKSCS-ExtB, "Ming(for ISO10646)ExtB";
+                font-size: 20px;
+                line-height: 35px;
+                letter-spacing: 1px;
+                padding-bottom: 15px;
+            }
+            p.caption{
+                font-weight: bold;
+                line-height: 25px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

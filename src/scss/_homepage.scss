@@ -1,0 +1,182 @@
+$break-small: 1199px;
+
+#nominateformcontainer{
+    .modal-content{
+        background-color: #fff8e3;
+        border-radius: 0px;
+        button.close{
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1.5rem;
+            line-height: 0.5rem;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            background: $maintextcolor;
+            font-weight: 100;
+        }
+        .modal-header{
+            color: #fff;
+            font-size: 28px;
+            display: block;
+            padding: 10px 0.8em;
+            background: $maintextcolor;
+            width: 13em;
+            margin-top: -0.8em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            border-radius: 0px;
+            @media screen and (max-width: $break-small) {
+                width: 70%;
+                font-size: 2.2vmin;
+            } 
+        }
+        fieldset{
+            margin: 10px 0px;
+            .field{
+                font-size: 16px; 
+                height: 52px;
+                width: 100%;
+                line-height: 2em; 
+                background: #fff; 
+                border: 1px solid #ccc;
+                padding-left: 1em;
+                margin: 0px 5px;
+                display: inline-block;
+                input{
+                    border: none;
+                    height: 50px;    
+                    width: 100%; 
+                    @media screen and (max-width: $break-small) {
+                        width: 100%;
+                        height: 37px;
+                    }
+                }
+                input:focus,
+                select:focus,
+                textarea:focus,
+                button:focus {
+                    outline: none;
+                    background: #fff;
+                }
+                @media screen and (max-width: $break-small) {
+                    font-size: 14px; 
+                    width: 100%;
+                    height: 40px;
+                    margin: 10px 5px;
+                } 
+            }
+            legend{
+                font-size: 24px;
+                color: $maintextcolor;
+                @media screen and (max-width: $break-small) {
+                    font-size: 2.2vmin;
+                } 
+            }
+            .secret-submit-button{
+                width: 180px;
+                height: 40px;
+                border-radius: 20px 20px;
+                background-color: $maintextcolor;
+                text-align: center;
+                color: #fff;
+                line-height: 40px;
+                font-size: 18px;
+                margin: 0 auto; 
+               
+                ::first-letter {
+                    letter-spacing: 1em;
+                }
+            }
+            .secret-submit-button::first-letter{
+                letter-spacing: 1em;
+            }
+            .inputfile {
+                width: 0.1px;
+                height: 0.1px;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: -1;
+            }
+            .inputfile + label {
+                font-size: 1.25em;
+                font-weight: 700;
+                color: white;
+                border-radius: 20px 20px;
+                text-align: center;
+                background-color: $maintextcolor;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                display: inline-block;
+            }
+          
+            .inputfile + label {
+                cursor: pointer; /* "hand" cursor */
+            }
+            .field2{
+                font-size: 16px; 
+                height: 100px;
+                width: 100%;
+                line-height: 2em; 
+                background: #fff; 
+                border: 1px solid #ccc;
+                padding-left: 1em;
+                margin: 0px 5px;
+                display: inline-block;
+                @media screen and (max-width: $break-small) {
+                    font-size: 14px; 
+                } 
+                textarea{
+                    border: none;
+                    height: 90px;
+                    width: 100%;
+                }
+            }
+            .field3{
+                button{
+                    font-size: 1.25em;
+                    font-weight: 700;
+                    color: white;
+                    border-radius: 20px 20px;
+                    text-align: center;
+                    background-color: $maintextcolor;
+                    width: 100%;
+                    height: 40px;
+                    line-height: 40px;
+                    display: inline-block;
+                }
+                
+            }
+            .photopreview {
+                position: relative;
+                background: #fff;
+                overflow: hidden;
+                width: 150px;
+                height: 150px;
+                margin: 20px;
+                img{
+                    width: 100%;
+                }
+                button.close{
+                    position: absolute;
+                    border-radius: 0;
+                    right: 0;
+                    top: 0;
+                    font-size: 1.5rem;
+                    line-height: 0.5rem;
+                    color: #fff;
+                    width: 30px;
+                    height: 30px;
+                    background: $maintextcolor;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,103 @@
+<!-- Begin pageview log -->
+<div id="nxm_iframeDiv" style="display: none"></div>
+<div id="nxm_vtrk_iframeDiv" style="display: none"></div>
+<script type="text/javascript" src="https://imp.nextmedia.com/js/nxm_tr_v20s.js"></script>
+<!-- <script type="text/javascript" src="https://dev-imp.nextmedia.com/js/nxm_tr_v20s_dev.js"></script>-->
+<!--<script id="gdpr-message" src='https://dev-policy.appledaily.com/gdpr.min.js?cpreg=HK&platform=WEB&v=20180607'></script> -->
+<script id="gdpr-message" src='https://policy.appledaily.com/gdpr.min.js?cpreg=HK&platform=WEB&v=20181025'></script>
+<script>
+  var logPageview = true;
+  function disableLogPageview() {
+    logPageview = false;
+  }
+
+  function getPlatform() {
+    if (!window.matchMedia('(min-width: 768px)').matches) {
+      return "MOBWEB";
+    }
+    return "WEB";
+  }
+  
+  function campaignLog(loggingItem){
+    console.log(loggingItem);
+    if (/android/i.test(navigator.userAgent)) platform = 'ANDROID';
+    else if (/(iphone|ipod)/i.test(navigator.userAgent)) platform = 'IPHONE';
+    else if (/iPad/i.test(navigator.userAgent)) platform = 'IPAD';
+    else platform = 'WEB';
+    var campaign_id = '1283';
+     var queries = {};
+     var adid=""; 
+      $.each(document.location.search.substr(1).split('&'),function(c,q){
+        var i = q.split('=');
+        if(i!=""){
+          queries[i[0].toString()] = i[1].toString();
+          if (queries.u){
+            adid = queries.u;
+          }
+        }
+      });
+
+    if ($('#entry4a').is(':checked')) gender = "M";
+    else if ($('#entry4b').is(':checked')) gender = 'F';
+
+    var cpmgParam = {
+      'ADID': adid,
+      'GIGYAUD': '', //Membership ID , required
+      'ACTION': 'USER', //required
+      'CPREG': 'HK', //required
+      'CPID': campaign_id, //required
+      'USRC': 'REG', //required
+      'PLATFORM': platform, //required
+      "EMAIL":loggingItem.email,
+      "PH":loggingItem.phone,
+      "NAME":loggingItem.name,
+      "SNAME":loggingItem.name,
+      "G":loggingItem.sex,
+      "DOB":'',
+      "IC":''
+    };
+    
+    nxmTrack.trackCMPG(cpmgParam);
+  }
+
+  function sendPageview(nxmObj) {
+    nxmObj.platform = getPlatform();
+    for (var nxmProp in nxmObj) {
+      nxmTrack.nxmAddSeg(nxmProp.toUpperCase() + '=' + encodeURIComponent(nxmObj[nxmProp]));
+    }
+    var ngs_id = nxmTrack.readCookie('ngs_id');
+    if (ngs_id == null) ngs_id = '';
+    nxmTrack.nxmAddSeg('NGSID=' + ngs_id);
+    nxmTrack.nxmSendPageDepth(0, new Date().getTime());
+  }
+    var nxmObj1 = {"region": "HK", "prod": "BESTMALLAWARDS", "site": "bestmallawards.com",
+    "platform": "WEB", "section": "", "media": "TEXT",
+    "content": "", "issueid": "", "title": "動MALL王大獎2018",
+    "cid": "", "news": "",
+    "edm": "", "action": "PAGEVIEW", "subsect": "", "subsubsect": "",
+    "menu": "", "auth": "", "src": "AD", "L": "TC",
+    "ch": "", "cat": "", "ky": "", "ngsid": "", "ref": ""};
+   
+      
+
+  (function() {
+    sendPageview(nxmObj1);
+    //Scroll Depth tracking
+    var trackRecords = [];
+  
+
+    function getPageScrollPercent() {
+      var bottom = $(window).height() + $(window).scrollTop();
+      var height = $(document).height();
+      return Math.round(100 * bottom / height);
+    }
+
+    function sendPageDepth(depth) {
+      trackRecords.push(depth.toString());
+      nxmObj1.platform = getPlatform();
+      nxmTrack.nxmAddSeg('PLATFORM=' + encodeURIComponent(nxmObj1.platform));
+      nxmTrack.nxmSendPageDepth(depth, new Date().getTime());
+    }
+  })();
+</script>
+<!-- End pageview log -->

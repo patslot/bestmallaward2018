@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bestmallApp">
+<head>
+<%- include('header.ejs') %>
+</head>
+
+<body ng-controller="homepageCon">
+<div class="fixedcloud"></div>
+    <div class="container">
+         <%- include('nav.ejs', {section: 'result'}) %>    
+    </div>
+    <div class="visual-container cloud">
+        <img src="cloud1.png" alt="" srcset="" style="right: 100px;">
+        <img src="cloud2.png" alt="" srcset="" style="left: 100px;">
+        <img src="cloud3.png" alt="" srcset="" style="right: 100px;">
+    </div>
+    <div class="container-fuild  d-xl-none mobile-visual">
+     <img class="img-fluid" src="mobile_event_main.png" alt="" srcset="">  
+    </div>
+    <div class="section-visual-container  d-none d-xl-block">
+        <div class="visual">
+            <img id="main" src="event_main.png" alt="" srcset=""> 
+            <div id='starcontainer'></div>
+        </div> 
+    </div>
+        <div class="advercontainer" data-velocity=".9" >
+            <div class="adv-header logo_hollywood">
+                <div class="backbtn">
+                    <a href='../event'>
+                        <img src='btn_back.png'>
+                    </a>
+                </div>
+            </div>
+            <div class="adv-video">
+                    <div id="video_player"></div>
+            </div>
+            
+            <div class="advertorialBody">
+                <p>一年一度的動MALL王大獎又來到，一班動MALL女已經依照動MALL王派出的指令，四出於各商場進行神秘任務！這次來到鑽石山荷里活廣場，發現有很多家長帶小朋友來荷里活廣場購物同玩。整個商場的設施都全面照顧到一家大小的需要，難怪荷里活廣場會得到Apple Daily Digital頒發的「最佳親子動MALL王大獎」！</p>
+                <img class="photo" src="hollywood_feature.jpg">
+                <p>荷里活廣場商戶組合多元化，擁有逾290間店舖，雲集多間商戶、食肆及消閒娛樂，週末及週日有不同的表演及展銷，更會每月舉辦不同類型的主題活動，特別是親子活動，讓一眾家庭成員能共享親子之樂。</p>
+                <img class="photo" src="hollywood_1.jpg">
+                <p class="caption">好玩又能增進知識的「STEM實驗室」工作坊。</p>
+                <img class="photo" src="hollywood_2.jpg">
+                <p class="caption">推廣本地耕作、不時不食概念的「蔬食文化節」。</p>
+                <img class="photo" src="hollywood_3.jpg">
+                <p class="caption">認識街頭運動、強身健體的「街頭運動會」體驗日。</p>
+                <img class="photo" src="hollywood_4.jpg">
+                <p class="caption">由足球學校星級導師教授的「足球訓練基地」。</p>
+                <img class="photo" src="hollywood_5.jpg">
+                <p class="caption">推廣亞洲殘疾人運動會、為參賽健兒打氣的「亞殘運挑戰場」。</p>
+                <img class="photo" src="hollywood_6.jpg">
+                <p class="caption">鮮豔奪目的大型節日裝置。</p>
+                <img class="photo" src="hollywood_7.jpg">
+                <p class="caption">荷里活廣場有不同專為小孩而設的設施跟配套。</p>
+                <p>最體貼之處是廣場提供多項特別為家長而設的服務及設施，包括設有熱水供應、可借出嬰兒車的顧客服務中心，場內亦設有非附於洗手間的獨立哺乳室，考慮到初生母親的需要，同時照顧一家大小的需要。最佳親子動MALL王大獎非荷里活廣場莫屬！</p>
+            </div>
+        </div>  
+        <%- include('footer.ejs') %>
+        <%- include('videoUtil.ejs') %>
+        <%- include('./animation/event.ejs') %>
+       <script>
+                  var videodetail1 = {
+                    videoId : "bestmallawards2017video1",
+                    url : "https://campaign.nextdigital.com.hk/video_sales/bestmallawards/Hollywood_2018_v2.mp4",
+                };
+                var videoTitle1 = "Best Mall Awards 2018";
+                var elementId1 = "video_player";
+            
+              
+                renderVideo(videodetail1, videoTitle1, elementId1); 
+                
+       </script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bestmallApp">
+<head>
+<%- include('header.ejs') %>
+</head>
+
+<body ng-controller="resultCon">
+    <div class="fixedcloud"></div>
+    <div class="container">
+         <%- include('nav.ejs', {section: 'result'}) %>    
+    </div>
+    <div class="visual-container cloud">
+        <img src="cloud1.png" alt="" srcset="" style="right: 100px;">
+        <img src="cloud2.png" alt="" srcset="" style="left: 100px;">
+        <img src="cloud3.png" alt="" srcset="" style="right: 100px;">
+    </div>
+    <div class="container-fuild  d-xl-none mobile-visual">
+     <img class="img-fluid" src="mobile_result_main.png" alt="" srcset="">  
+    </div>
+    <div class="section-visual-container  d-none d-xl-block">
+        <div class="visual">
+            <img id="main" src="result_main.png" alt="" srcset=""> 
+            <div id='smallpaper'></div>
+        </div> 
+    </div>
+    <div class="result-content-container" data-velocity=".9" >
+            
+            <div class="history-content">
+                <div class="history-title">
+                    <img src="title-2018.png"> 
+                </div>   
+            </div>
+            <div class="history-video">
+                    <div id="video_player"></div>
+            </div>
+            <div class="history-content">
+                <div class="history-title">
+                    <img src="subtitle1-2018.png"> 
+                </div> 
+                <div class="awardsContainer">  
+                    <div class="awards"><a href="../event/apm" target="_blank"><img src="apm.jpg"></a></div>
+                    <div class="awards"><a href="#" ><img src="habour_city.jpg"></a></div>
+                    
+                    <div class="awards"><a href="../event/langham" target="_blank"><img src="langham_plaza.jpg"></a></div>
+                    <div class="awards"><a href="#"  ><img src="festivalwalk.jpg"></a></div>
+                    <div class="awards"><a href="#"  ><img src="times_square.jpg"></a></div>
+                    <div class="awards"><a href="../event/telford" target="_blank"><img src="telford.jpg"></a></div>
+                    <div class="awards"><a href="#"><img src="the_one.jpg"></a></div>
+                    <div class="awards"><a href="#" ><img src="hysan.jpg"></a></div>
+                    <div class="awards"><a href="#" ><img src="megabox.jpg"></a></div>
+                    <div class="awards"><a href="../event/popcorn" target="_blank"><img src="popcorn.jpg"></a></div>
+                </div>
+
+                <div class="history-title">
+                    <img src="subtitle2-2018.png"> 
+                </div> 
+                <div class="awardsContainer">  
+                    <div class="awards">
+                        <a href="../event/hollywood" target="_blank"><img src="hollywood_plaza.jpg">
+                        <p>最佳親子<br>
+                        動MALL王大獎</p></a>
+                    </div>
+                    <div class="awards">
+                    <a href="../event/telford" target="_blank"><img src="telford.jpg">
+                           <p>最多元化購物<br>動MALL王大獎</p>
+                        </a>
+                    </div>
+                    <div class="awards">
+                        <a href="../event/popcorn" target="_blank"><img src="popcorn.jpg">
+                           <p>最潮活力<br>動MALL王大獎</p>
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="awards">
+                        <a href="../event/paradise" target="_blank"><img src="paradise.jpg">
+                           <p>最佳Outlet體驗<br>動MALL王大獎</p>
+                        </a>
+                    </div>
+
+                    <div class="awards">
+                        <a href="../event/langham" target="_blank"><img src="langham_plaza.jpg">
+                           <p>最多滋味<br>動MALL王大獎</p>
+                        </a>
+                    </div>
+
+                    <div class="awards">
+                        <a href="../event/apm" target="_blank"><img src="apm.jpg">
+                           <p>最佳玩樂享受<br>動MALL王大獎</p>
+                        </a>
+                    </div>
+
+                    <hr>
+                    <div class="awards">
+                        <a href="../event/vcity" target="_blank"><img src="v_city.jpg">
+                           <p>最新科技互動<br>動MALL王大獎</p>
+                        </a>
+                    </div>
+
+                    <div class="awards">
+                        <a href="../event/top" target="_blank"><img src="top.jpg">
+                           <p>最佳O2O客戶體驗<br>動MALL王大獎</p>
+                        </a>
+                    </div>
+
+                    <div class="awards">
+                        <a href="#"><img src="k11.jpg">
+                           <p>最具藝術文化<br>動MALL王大獎</p>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="history-title">
+                    <img src="subtitle3-2018.png"> 
+                </div> 
+                <div class="awardsContainer">  
+                    <div class="awards">
+                        <a href="#"><img src="k11.jpg">
+                        <p>最佳社交媒體<br>
+                        推廣大獎</p></a>
+                    </div>
+                    <div class="awards">
+                        <a href="#"><img src="ifc.jpg">
+                        <p>最佳社交媒體<br>
+                        推廣大獎</p>
+                        </a>
+                    </div>
+                    <div class="awards">
+                        <a href="#"><img src="habour_city.jpg">
+                        <p>最佳社交媒體<br>推廣大獎</p>
+                        </a>
+                    </div>
+
+                    <div class="awards">
+                        <a href="../event/vcity"><img src="v_city.jpg">
+                        <p>最佳商場服務大獎</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>  
+        <%- include('footer.ejs') %>
+        <%- include('videoUtil.ejs') %>
+        <%- include('./animation/result.ejs') %>
+        <script>
+        $('.parallax').scrolly();
+        var videodetail1 = {
+            videoId : "bestmallawards2017video1",
+            url : "https://campaign.nextdigital.com.hk/video_sales/bestmallawards/result_2018.mp4",
+        };
+        var videoTitle1 = "Best Mall Awards 2018";
+        var elementId1 = "video_player";
+    
+        // var videodetail2 = {
+        //     videoId : "bestmallawards2017video2",
+        //     url : "http://video.appledaily.com.hk/mcp/encode/2018/11/26/3737585/video_clean_w.mp4",
+        // };
+        // var videoTitle2 = "Best Mall Awards 2017";
+        // var elementId2 = "video_player2";
+    
+        $('#'+elementId1).parent().css('display','none');
+        // renderVideo(videodetail1, videoTitle1, elementId1); 
+        // renderVideo(videodetail2, videoTitle2, elementId2); 
+        var slider = $('.slider').bxSlider({
+            pager: false,
+            controls: false
+        });
+        $("#slider-previous").click(function(){
+            slider.goToPrevSlide();
+        })
+        $("#slider-next").click(function(){
+            slider.goToNextSlide();
+        })
+        $('img[usemap]').rwdImageMaps();
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<script type="text/javascript" src="https://staticlayout.appledaily.hk/uvp2/js/anvp.common.lib-v1.0.4.min.js?v=20180605"></script>
+<script>
+function renderVideo(video, title, elemId) {
+  if (video && video.url) {
+    var videoId = video.videoId || "";
+    var anvpId = "anvp" + videoId; // Unique player id
+    var anvpInstance = new AnvatoPlayer(anvpId);
+    anvpInstance.setVideoUrl(video.url);
+    anvpInstance.setPlayerSize("100%", "100%");
+    anvpInstance.setTitle(title.replace(/'/g, '’').replace(/"/g, '＂'));
+    anvpInstance.setDescription("");
+    anvpInstance.setVolume(0); // Value between 0 - 1
+    anvpInstance.setShareEnable(false); 
+    anvpInstance.setAutoPlay(false);
+    anvpInstance.createInstance(elemId || "video_player"); // Div Id match
+  }
+}
+</script>

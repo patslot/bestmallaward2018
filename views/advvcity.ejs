@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bestmallApp">
+<head>
+<%- include('header.ejs') %>
+</head>
+
+<body ng-controller="homepageCon">
+<div class="fixedcloud"></div>
+    <div class="container">
+         <%- include('nav.ejs', {section: 'result'}) %>    
+    </div>
+    <div class="visual-container cloud">
+        <img src="cloud1.png" alt="" srcset="" style="right: 100px;">
+        <img src="cloud2.png" alt="" srcset="" style="left: 100px;">
+        <img src="cloud3.png" alt="" srcset="" style="right: 100px;">
+    </div>
+    <div class="container-fuild  d-xl-none mobile-visual">
+     <img class="img-fluid" src="mobile_event_main.png" alt="" srcset="">  
+    </div>
+    <div class="section-visual-container  d-none d-xl-block">
+        <div class="visual">
+            <img id="main" src="event_main.png" alt="" srcset=""> 
+            <div id='starcontainer'></div>
+        </div> 
+    </div>
+        <div class="advercontainer" data-velocity=".9" >
+            <div class="adv-header logo_vcity">
+                <div class="backbtn">
+                    <a href='../event'>
+                        <img src='btn_back.png'>
+                    </a>
+                </div>
+            </div>
+            <div class="adv-video">
+                    <div id="video_player"></div>
+            </div>
+            
+            <div class="advertorialBody">
+                <p>一年一度的動MALL王大獎又來到，一班動MALL女已經依照動MALL王派出的指令，四出於各商場進行神秘任務！V city坐落港鐵屯門站上蓋，並致力應用科技全面加強與顧客的聯繫及提供更優質、方便的服務，難怪會榮獲Apple Daily Digital頒發的「最新科技互動動MALL王大獎」！</p>
+                <img class="photo" src="vcity_1.jpg">
+                <p class="caption">V city以科技為顧客提供更便利和舒適的購物體驗。</p>
+                <p>V city的手機應用程式推出全港首創的「泊車Fun分賞」功能，會員可以用積分換領免費泊車時數直接出車，節省排隊時間。</p>
+                <img class="photo" src="vcity_2.jpg">
+                <p class="caption">利用V city手機應用程式，能夠更快捷方便於餐廳訂枱和查看現有車位數目。</p>
+                <p>為節省顧客輪候食肆座位的時間，V city特別推出「搵食e」遙距電子訂枱智能系統；顧客亦可透過手機應用程式隨時查看現有車位數目，方便又省時。</p>
+                <img class="photo" src="vcity_3.jpg">
+                <p class="caption">iBeacon定位技術可讓顧客輕易找到想去的店舖。</p>
+                <p>V city引入「E-locker智能櫃」，提供寄件服務，務求為顧客帶來最貼心又優質的購物體驗。同時亦引進全港覆蓋最全面的iBeacon定位技術，覆蓋至過百間商舖，只要開啟藍牙便可以利用商場導航找到想去的店舖，更可以登入參加各項商場活動。</p>
+            </div>
+        </div>  
+        <%- include('footer.ejs') %>
+        <%- include('videoUtil.ejs') %>
+        <%- include('./animation/event.ejs') %>
+       <script>
+                  var videodetail1 = {
+                    videoId : "bestmallawards2017video1",
+                    url : "https://campaign.nextdigital.com.hk/video_sales/bestmallawards/vcity_2018.mp4",
+                };
+                var videoTitle1 = "Best Mall Awards 2018";
+                var elementId1 = "video_player";
+            
+              
+                renderVideo(videodetail1, videoTitle1, elementId1); 
+                
+       </script>
+</body>
+
+</html>

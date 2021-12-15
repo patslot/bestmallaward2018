@@ -1,0 +1,53 @@
+<script>
+    function popcorn_ani(element){
+            var popheight = Math.floor((Math.random() * 20) + 20);
+            var repeatduration = Math.floor((Math.random() * 500) + 500);
+            element.velocity({
+                top: '-='+popheight+'px',
+                left: '+=2px'
+            }, {
+                duration:repeatduration ,
+                complete: function() { 
+                element.remove();
+                }
+            })
+        }
+        
+        function popcorn_clone(){
+            var popcorn_con = $('#popcorncontainer');
+            var rand = Math.floor((Math.random() * 7)+1);
+            var pop = $('#'+'popcorn'+rand) ;
+            if ($('#popcorncontainer '+'#'+'popcorn'+rand).length){
+                return; 
+            }
+            pop.clone().appendTo('#popcorncontainer');
+            var clonepop = $('#popcorncontainer '+'#'+'popcorn'+rand)
+            popcorn_ani(clonepop);
+        }
+        setInterval(popcorn_clone,100);
+
+        $('#car1').velocity({
+            top: '+=128px',
+            left: '+=220px'
+        },{
+            duration: 5000
+        })
+        $('#car2').velocity({
+            top: '+=128px',
+            left: '+=220px'
+        },{
+            duration: 6000
+        })
+
+        $('#tram').velocity({
+            top: '+=162px',
+            left: '+=278px'
+        },{
+            loop: true,
+            duration: 2000,
+            delay: 3000,
+            easing: "easeInSine",
+            complete: function() { 
+            }
+        })
+</script>

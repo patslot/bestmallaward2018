@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bestmallApp">
+<head>
+<%- include('header.ejs') %>
+</head>
+
+<body ng-controller="speechCon">
+    <div class="fixedcloud"></div>
+    <%- include('nav.ejs', {section: 'detail'}) %>    
+
+        <div class="section-bg parallax" data-velocity=".6">
+            <img src="blurvisual.png" alt="" srcset="">   
+        </div>    
+        <div class="visual-container cloud parallax" data-velocity=".2">
+            <img src="cloud1.png" alt="" srcset="" style="right: 100px;">
+            <img src="cloud2.png" alt="" srcset="" style="left: 100px;">
+            <img src="cloud3.png" alt="" srcset="" style="right: 100px;">
+        </div>    
+        <div class="container-fuild  d-xl-none mobile-visual">
+            <img class="img-fluid" src="mobile_speech_main.png" alt="" srcset="">  
+        </div>
+        <div class="section-visual-container  d-none d-xl-block">
+            <div class="visual">
+               <img id="main" src="speechvisual.png" alt="" srcset="">
+               <img id="mic" src="mic.png" alt="" srcset="">
+            </div> 
+        </div>
+        <div class="section-content-container" data-velocity=".9">
+            <div class="leading">
+                <p>壹傳動明白商場與市民的生活息息相關，每個商場均具其獨特性及設合不同客戶的需求。故此壹傳動再次舉辦「動MALL王大獎2018」，以表揚深受市民喜愛的商場，同時發掘它們獨有的商場特色，令市民有更多購物商場的選擇。
+                </p>                
+            </div>
+            <div class="content parallax">
+              
+            </div>
+
+    <script>
+        $('.parallax').scrolly();
+    </script>
+    <%- include('footer.ejs') %>
+    <%- include('./animation/speech.ejs') %>
+</body>
+
+</html>

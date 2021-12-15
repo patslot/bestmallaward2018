@@ -1,0 +1,35 @@
+<title>Best Mall Awards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:url"           content="https://www.bestmallawards.com/" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="動MALL王大獎2018" />
+<meta property="og:description"   content="壹傳動明白商場與市民的生活息息相關，每個商場均具其獨特性及設合不同客戶的需求。故此壹傳動再次舉辦「動MALL王大獎2018」，以表揚深受市民喜愛的商場，同時發掘它們獨有的商場特色，令市民有更多購物商場的選擇。" />
+<meta property="og:image"         content="/fb_image-01.jpg" />
+
+  <script src='assets/bundle.js'></script>
+  <link rel="stylesheet" type="text/css" href="assets/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/jquery-ui.min.css">
+  <script src='assets/ng-file-upload.min.js'></script>
+  <script src='assets/jquery.rwdImageMaps.min.js'></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="assets/jquery.ui.touch-punch.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  
+    var background_image_parallax = function($object, multiplier){
+    multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+    var $doc = $(document);
+    $object.css({"background-attatchment" : "fixed"});
+        $(window).scroll(function(){
+        var from_top = $doc.scrollTop(),
+            bg_css = '0px ' +(multiplier * from_top) + 'px';
+        $object.css({"background-position" : bg_css });
+    });
+    };
+    background_image_parallax($(".fixedcloud"),0.2);
+
+})
+  </script>

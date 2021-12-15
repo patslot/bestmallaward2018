@@ -1,0 +1,60 @@
+<script>
+        $('#balloon1').velocity({
+            top: '+=40px',
+            left: '+=20px'
+        },{
+            duration: 5000,
+            loop: true
+        })
+        $('#balloon2').velocity({
+            top: '+=20px',
+            left: '+=10px'
+        },{
+            duration: 3000,
+            loop: true
+        })
+
+        $('#tram').velocity({
+            top: '+=162px',
+            left: '+=278px'
+        },{
+            loop: true,
+            duration: 2000,
+            delay: 3000,
+            easing: "easeInSine",
+            complete: function() { 
+            }
+        })
+        var readytimeinterval = setInterval(function() {
+            createRandomGold("starcontainer")
+        }, 180);
+        function createRandomGold(parent){
+			var random_speed = 1000 + parseInt(Math.random() * 1000) ;
+			var random_rotation = parseInt(Math.random() * 10) ;
+			var oImg = document.createElement("img");
+			oImg.setAttribute('src', './star.png');
+			// oImg.setAttribute('src', './js/flower.png');
+			oImg.setAttribute('class', 'paper');
+			// oImg.style.width = 5 + parseInt(Math.random() * 2) + "%" ;
+			oImg.style.left = parseInt(Math.random() * 100) + "%" ;
+			oImg.style.top =  parseInt(Math.random() * 100) + "%" ;
+			document.getElementById(parent).appendChild(oImg);
+			
+			$(oImg).animate({
+			    width: "1%",
+                height: "1%",
+                bottom: "2%"
+			}, random_speed, "linear" ,function(){
+				var element = this;
+				if(element.parentNode)element.parentNode.removeChild(element);
+			});
+			
+			$(oImg).css({
+			  '-moz-transform':'rotate('+random_rotation+'deg)',
+			  '-webkit-transform':'rotate('+random_rotation+'deg)',
+			  '-o-transform':'rotate('+random_rotation+'deg)',
+			  '-ms-transform':'rotate('+random_rotation+'deg)',
+			  'transform':'rotate('+random_rotation+'deg)'
+			});
+		}
+</script>

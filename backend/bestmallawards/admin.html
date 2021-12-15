@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>Login</title>
+		<!-- jquery -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<style>
+			.hiddendata{
+				display: none;
+			}
+			.uploadedPhoto{
+				width: 120px;
+			}
+			.tab-pane{
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+			<div class="container">
+					<nav class="navbar navbar-light bg-light">
+							<a class="navbar-brand" href="#">Deluxe Club Admin page login</a>
+					</nav>
+					<ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#3">公眾提票</a></li>
+							<li><a data-toggle="tab" href="#2">提名</a></li>
+							<li><a data-toggle="tab" href="#1">神秘顧客</a></li>
+					</ul>
+					<div class="tab-content">
+								<div id="3" class="row tab-pane fade in active">
+									<div class="col-md-12">
+											<table class = "table" width = "100%">
+													<thead>
+															<tr>
+																<th>Name</th>
+																<th>SEX</th>
+																<th>PHONE</th>
+																<th>EMAIL</th>
+																<th>VOTE</th>
+																<th>Q1</th>
+																<th>Q2</th>
+																<th>Q3</th>
+																<th>Q4</th>
+																<th>Q5</th>
+																<th>Q6</th>
+																<th>PROMOTION 1</th>
+																<th>PROMOTION 2</th>
+																<th>Date Added</th>
+															</tr>
+															</thead>
+
+															
+													<tbody>
+													{% for publicUser in publicUsers %}
+													<tr class="tablerow" id="row{{loop.index}}" >
+													<td align="center" >{{publicUser.NAME}}</td>
+													<td align="center" >{{publicUser.SEX}}</td>
+													<td align="center" >{{publicUser.PHONE}}</td>
+													<td align="center" >{{publicUser.EMAIL}}</td>
+													<td align="center" >{{publicUser.VOTE}}</td>
+													<td align="center" >{{publicUser.Q1}}</td>
+													<td align="center" >{{publicUser.Q2}}</td>
+													<td align="center" >{{publicUser.Q3}}</td>
+													<td align="center" >{{publicUser.Q4}}</td>
+													<td align="center" >{{publicUser.Q5}}</td>
+													<td align="center" >{{publicUser.Q6}}</td>
+													<td align="center" >{{publicUser.PROMOTION1}}</td>
+													<td align="center" >{{publicUser.PROMOTION2}}</td>
+													<td align="center" >{{publicUser.PLAYTIME}}</td>
+													</tr>
+													{% endfor %}
+													</tbody>
+											</table>	
+									</div>
+							</div>
+							<div id="1" class="row tab-pane fade">
+									<div class="col-md-12">
+											<table class = "table" width = "100%">
+													<thead>
+															<tr>
+																<th>Name</th>
+																<th>AGE</th>
+																<th>SEX</th>
+																<th>AREA</th>
+																<th>PHONE</th>
+																<th>EMAIL</th>
+																<th>Q1</th>
+																<th>Q2</th>
+																<th>Q3</th>
+																<th>Q4</th>
+																<th>Q5</th>
+																<th>Q6</th>
+																<th>Q7</th>
+																<th>Q8</th>
+																<th>Date Added</th>
+															</tr>
+															</thead>
+
+															
+													<tbody>
+													{% for secretUser in secretUsers %}
+													<tr class="tablerow" id="row{{loop.index}}" >
+													<td align="center" >{{secretUser.NAME}}</td>
+													<td align="center" >{{secretUser.AGE}}</td>
+													<td align="center" >{{secretUser.SEX}}</td>
+													<td align="center" >{{secretUser.AREA}}</td>
+													<td align="center" >{{secretUser.PHONE}}</td>
+													<td align="center" >{{secretUser.EMAIL}}</td>
+													<td align="center" >{{secretUser.Q1}}</td>
+													<td align="center" >{{secretUser.Q2}}</td>
+													<td align="center" >{{secretUser.Q3}}</td>
+													<td align="center" >{{secretUser.Q4}}</td>
+													<td align="center" >{{secretUser.Q5}}</td>
+													<td align="center" >{{secretUser.Q6}}</td>
+													<td align="center" >{{secretUser.Q7}}</td>
+													<td align="center" >{{secretUser.Q8}}</td>
+													<td align="center" >{{secretUser.PLAYTIME}}</td>
+													</tr>
+													{% endfor %}
+													</tbody>
+											</table>	
+									</div>
+							</div>
+							<div id="2" class="row tab-pane fade">
+								<div class="col-md-12">
+										<table class = "table" width = "100%">
+												<thead>
+														<tr>
+															<th>Name</th>
+															<th>URL</th>
+															<th>Facebook</th>
+															<th>Description</th>
+															<th>Photo</th>
+															<th>Date Added</th>
+														</tr>
+														</thead>
+														
+												<tbody>
+												{% for nominate in nominates %}
+												<tr class="tablerow2" id="row{{loop.index}}" >
+												<td align="center" >{{nominate.NAME}}</td>
+												<td align="center" >{{nominate.URL}}</td>
+												<td align="center" >{{nominate.FBURL}}</td>
+												<td align="center" >{{nominate.DESCRIPTION}}</td>
+												<td align="center" ><a href="{{nominate.PHOTOURL}}"><img class="uploadedPhoto" src="{{nominate.PHOTOURL}}"></a></td>
+												<td align="center" >{{nominate.PLAYTIME}}</td>
+												</tr>
+												{% endfor %}
+												</tbody>
+										</table>	
+								</div>
+						</div>
+				</div>		
+			</div>
+			<script>
+					
+						
+			</script>
+	</body>
+</html>

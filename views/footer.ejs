@@ -1,0 +1,33 @@
+ <div class="footer container-fuild">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="logo"> <a href="/"><img src="nav_logo.png"  alt="" srcset=""></a></div>
+                <div class="tnc"> 
+                    <ul>
+                        <li class="is-first"><a target="_blank" href="http://www.nextdigital.com.hk/info/tnc.html">使用條款</a></li>
+                        <li><a target="_blank" href="http://www.nextdigital.com.hk/info/privacy.html">私隱聲明</a></li>
+                        <li class="is-last"><a target="_blank" href="http://nextmobile.hk/en/contactUs/contactus">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="copyright"> 
+                    <p> @2018 Next Mobile Limited All Rights Reserved. </p>
+                </div>    
+        
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('.facebookshare').click(function(){
+        var share = encodeURIComponent('https://www.bestmallawards.com');
+        var shareURL = "https://www.facebook.com/sharer/sharer.php?u="+share+"&t=動MALL王大獎2018" ; 
+        window.open(shareURL, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600')
+    });
+})
+    
+</script>
+<%- include('1x1.ejs') %>
+<%- include('tracking.ejs') %>

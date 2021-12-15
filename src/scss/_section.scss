@@ -1,0 +1,926 @@
+$break-small: 1199px;
+.section-visual-container{
+    position:relative; 
+    margin: 0 auto;
+    width: 640px;
+    min-height: 550px; 
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+        margin-top: 6vh;
+    }
+    .visual{
+        display: block;
+        max-width: 1140px;
+        margin: 0 auto;
+        text-align: center;
+        #main{
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 75px;
+            right: 0;
+            position: absolute;
+            z-index: 1;
+        }
+        #balloon1{
+            position: absolute;
+            left: 358px;
+            top: 71px;
+            z-index: 2;
+        }
+        #balloon2{
+            position: absolute;
+            left: 131px;
+            top: 163px;
+            z-index: 2;
+        }
+        #speakbubble{
+            position: absolute;
+            left: 175px;
+            top: 22px;
+            z-index: 0;
+        }
+        #secretmain{
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            position: absolute;
+            z-index: 2;
+        }
+        #card1{
+            position: absolute;
+            left: 501px;
+            top: 182px;
+            z-index: 3;
+        }
+        #card2{
+            position: absolute;
+            left: 452px;
+            top: 207px;
+            z-index: 2;
+        }
+        #card3{
+            position: absolute;
+            left: 238px;
+            top: 90px;
+            z-index: 2;
+        }
+        #card4{
+            position: absolute;
+            left: 405px;
+            top: 84px;
+            z-index: 0;
+        }
+        #card5{
+            position: absolute;
+            left: 261px;
+            top: 206px;
+            z-index: 3;
+        }
+        #card6{
+            position: absolute;
+            left: 182px;
+            top: 233px;
+            z-index: 3;
+        }
+
+        #historymain{
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            position: absolute;
+            z-index: 2;
+        }
+        #film{
+            position: absolute;
+            left: 62px;
+            top: 138px;
+            z-index: 3;
+        }
+        #photo1{
+            position: absolute;
+            left: 143px;
+            top: 43px;
+            z-index: 3;
+        }
+        #photo2{
+            position: absolute;
+            left: 269px;
+            top: 69px;
+            z-index: 3;
+        }
+        #photo3{
+            position: absolute;
+            left: 221px;
+            top: 52px;
+            z-index: 3;
+        }
+        #photo4{
+            position: absolute;
+            left: 318px;
+            top: 33px;
+            z-index: 3;
+        }
+        #heart1{
+            position: absolute;
+            left: 369px;
+            top: 110px;
+            z-index: 3;
+        }
+        
+        #heart2{
+            position: absolute;
+            left: 255px;
+            top: 201px;
+            z-index: 3;
+        }
+        #heart3{
+            position: absolute;
+            left: 125px;
+            top: 73px;
+            z-index: 3;
+        }
+        #heart4{
+            position: absolute;
+            left: 128px;
+            top: 175px;
+            z-index: 3;
+        }
+
+        #mic{
+            position: absolute;
+            left: 312px;
+            top: 143px;
+            z-index: 3;
+        }
+        #smallpaper{
+            position: absolute;
+            left: 25%;
+            top: 20%;
+            z-index: 3;
+            width: 50%;
+            height: 50%;
+        }
+        .paper{
+            position: absolute;
+        }
+        #starcontainer{
+            position: absolute;
+            left: 41%;
+            top: 7%;
+            z-index: 3;
+            width: 37%;
+            height: 35%;
+        }
+    }
+    
+}
+.section-content-container{
+    position:relative; 
+    margin: 0 auto;
+    width: 100%;
+    min-height: 550px; 
+}
+.section-bg{
+    width: 100%; 
+    max-width: 1140px; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto; 
+    z-index: -2;
+    img{
+        width: 100%;
+    }
+    @media screen and (max-width: $break-small) {
+        margin-top: 6vh;
+    }
+}
+
+.leading{
+    display: block;
+    position: relative;
+    z-index: 11;
+    height: 310px;
+    width: 494px;
+    margin: 0 auto;
+    background: url(../../public/detail/bg-leading.png) no-repeat center center;
+    text-align: center;
+    padding: 41px 91px;
+    p{
+        font-size: 18px;
+        color: $maintextcolor;
+        line-height: 1.5em;
+    }
+    @media screen and (max-width: $break-small) {
+        width: 90vw;
+        height: 41vw;
+        background-position: top;
+        background-size: 90vw 41vw;
+        margin: 0 auto;
+        padding: 9vw 11vw;
+        
+        p{
+            font-size: 2.5vw;
+        }
+    }
+}
+.content{
+    text-align: center;
+    margin: 0 auto;
+    img{
+        @media screen and (max-width: $break-small) {
+            width: 90%;
+        }
+    }
+}
+
+.section-form-container{
+    position:relative; 
+    margin: 0 auto;
+    width: 900px;
+    min-height: 550px;
+    z-index: 21;
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+    } 
+}
+
+.formbox1{
+    background-color: $bgcolor;
+    font-size: 16px;
+    width: 900px;
+    padding: 25px 35px;
+    @media screen and (max-width: $break-small) {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2vw;
+    } 
+    h1{
+        color: #fff;
+        font-size: 28px;
+        display: block;
+        padding: 10px 2em;
+        background: $maintextcolor;
+        width: 12em;
+        margin-top: -1.5em;
+        margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        @media screen and (max-width: $break-small) {
+            font-size: 5.2vmin;
+        } 
+    }
+    legend{
+        font-size: 28px;
+        color: $maintextcolor;
+        @media screen and (max-width: $break-small) {
+            font-size: 5.2vmin;
+        } 
+    }
+    .field2{
+        font-size: 16px; 
+        height: 52px;
+        width: 28%;
+        line-height: 2em; 
+        background: #fff; 
+        border: 1px solid #ccc;
+        padding-left: 1em;
+        margin: 20px;
+        display: inline-block;
+        input{
+            border: none;
+            height: 50px;    
+            width: 214px;
+            @media screen and (max-width: $break-small) {
+                width: 100%;
+                height: 37px;
+            }
+        }
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: none;
+            background: #fff;
+        }
+        @media screen and (max-width: $break-small) {
+            font-size: 14px; 
+            width: 100%;
+            height: 40px;
+            margin: 20px 5px;
+        } 
+    }
+    .field{
+        font-size: 16px; 
+        height: 52px;
+        width: 28%;
+        line-height: 2em; 
+        background: #fff; 
+        border: 1px solid #ccc;
+        padding-left: 1em;
+        margin: 20px;
+        display: inline-block;
+        input{
+            border: none;
+            height: 50px;    
+            width: 214px;
+            @media screen and (max-width: $break-small) {
+                width: 100%;
+                height: 37px;
+            }
+        }
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: none;
+            background: #fff;
+        }
+        .cusSelectbox{
+            background: url(../../public/secret/arrow.png) no-repeat 96% 0;
+            height: 52px;
+            overflow: hidden;
+            width: 240px;
+            select {
+                background: transparent;
+                border: none;
+                font-size: 14px;
+                height: 29px;
+                padding: 5px; /* If you add too much padding here, the options won't show in IE */
+                width: 268px;
+                -webkit-appearance:none;
+
+             }
+        }
+        
+         
+         .cusSelectbox.slate {
+            background: url(../../public/secret/arrow.png)no-repeat 165px center;
+            height: 52px;
+            width: 240px;
+         }
+         
+         .cusSelectbox.slate select {
+            border: none;
+            font-size: 16px;
+            height: 52px;
+            width: 268px;
+         }
+         @media screen and (max-width: $break-small) {
+             width: 46%; 
+             height: 40px;
+             font-size: 14px; 
+             margin: 20px 5px;
+             input{
+                 width: 100%;
+             }
+             .cusSelectbox{
+                background: url(../../public/secret/arrow.png) no-repeat 96% 0;
+                font-size: 14px; 
+                height: 52px;
+                overflow: hidden;
+                width: 100%;
+                select {
+                    background: transparent;
+                    border: none;
+                    font-size: 14px;
+                    height: 29px;
+                    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+                    width: 110%;
+                 }
+            }
+            
+             
+             .cusSelectbox.slate {
+                background: url(../../public/secret/arrow.png) no-repeat right center;
+                background-size: 40px 40px;
+                height: 40px;
+                width: 100%;
+             }
+             
+             .cusSelectbox.slate select {
+                border: none;
+                font-size: 14px;
+                height: 40px;
+                width: 110%;
+             }
+         }    
+    }
+}
+.brownbox{
+    background-color: #a88566; 
+    height: 50px; 
+    width: 300px;
+    margin: 0 auto;
+}
+.formbox2{
+    background-color: $bgcolor;
+    width: 640px;
+    padding: 10px;
+    margin: 0 auto;
+    box-shadow: 0 15px 0 -5px #00000052;
+    @media screen and (max-width: $break-small) {
+        width: 90%;
+        margin: 0 auto;
+    } 
+    p.firstleading{
+        font-size: 18px;
+        color: $maintextcolor;
+        text-align: center;
+    }
+    fieldset{
+        margin: 10px 0px; 
+    }
+    .question{
+        display: flex;
+        justify-content: space-between;
+        
+        legend{
+            flex-grow: 1; 
+            background: url(../../public/secret/legend.png) no-repeat 0 0;
+            background-size: 127px 47px;
+            display: block;
+            width: 127px;
+            height: 47px;
+            color: #fff;
+            padding-left: 36px;
+            margin-left: -22px;
+            box-sizing: border-box;
+            @media screen and (max-width: $break-small) {
+                background-size: 20vw 8vw;
+                margin-left: -22px;
+                font-size: 1em;
+                width: 21%;
+                height: 9vw;
+            } 
+        }
+        p{
+            width: 79%;
+            text-align: left;
+            line-height: 1.3em;
+            font-size: 22px;
+        }
+        span{
+            width: 21%;
+            line-height: 1.3em;
+            flex-grow: 2; 
+            font-size: 14px;
+            float: right;
+        }
+    }
+    .answer{
+        text-align: center;
+        input[type="radio"]{ /* HIDE RADIO */
+            visibility: hidden; /* Makes input not-clickable */
+            position: absolute; /* Remove input from document flow */
+        }
+        input[type="radio"] + .radio_box{ /* IMAGE STYLES */
+            cursor:pointer;
+            opacity: 1; 
+            width: 138px ;
+            height: 42px ;
+            background: url("../../public/secret/off.png") no-repeat 0 0; 
+            background-size: cover; 
+            display: inline-block;
+            text-align: center;
+            color: #fff;
+            line-height: 42px;
+            margin: 0 20px;
+        }
+        
+        input[type="radio"]:checked + .radio_box{ /* (RADIO CHECKED) IMAGE STYLES */
+            background: url("../../public/secret/on.png") no-repeat 0 0; 
+            background-size: cover;
+        }
+          
+          input.ans_radio{
+            visibility: hidden; /* Makes input not-clickable */
+            position: absolute; /* Remove input from document flow */
+          }
+          input.ans_radio + p{ 
+              cursor:pointer;
+              font-family: 'cwTeXYen',sans-serif , "Microsoft JhengHei", "麗黑 Pro", "LiHei Pro Medium", Helvetica, "Helvetica Neue", 微软雅黑, Arial;
+              font-size: 18px;
+              border-radius: 1.5em; 
+              width: 100%; 
+              height: 2em;  
+              line-height: 2em;
+              text-align: center; 
+              background: #00a0ff; 
+              color: #fff;
+          }
+          
+          input.ans_radio:checked + p{ 
+              background: #ff3264; 
+          }
+    }
+    
+    .checkbox-container {
+        display: inline-block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        margin-right: 17px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      /* Hide the browser's default checkbox */
+      .checkbox-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #fff;
+        border: 1px #57a3a0 solid; 
+      }
+      
+      /* On mouse-over, add a grey background color */
+      .checkbox-container:hover input ~ .checkmark {
+        background-color: #fff;
+      }
+      
+      /* When the checkbox is checked, add a blue background */
+      .checkbox-container input:checked ~ .checkmark {
+        background-color: #fff;
+      }
+      
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      
+      /* Show the checkmark when checked */
+      .checkbox-container input:checked ~ .checkmark:after {
+        display: block;
+      }
+      
+      /* Style the checkmark/indicator */
+      .checkbox-container .checkmark:after {
+        left: 9px;
+        top: 6px;
+        width: 5px;
+        height: 10px;
+        border: solid #57a3a0;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+
+      /* slide control */ 
+
+        .ui-slider .ui-slider-handle{
+            background: #ffdc00 ; 
+            border-radius: 50%;
+            border: none;
+            width: 1em;
+            height: 1em;
+        }
+
+
+        .ui-slider-horizontal {
+            height: .3em;
+        }
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -.4em;
+            margin-left: -.6em;
+        }
+        .ui-widget.ui-widget-content {
+            border: none;
+            background: #cbcbcb ; 
+        }
+
+        .ui-widget-header {
+            background: #29abe2 ;
+        }
+
+    .slider_control{
+        margin: 50px 0 20px 0   ;
+        width:70%;
+        display: inline-block;
+        
+    }
+    .btn_minus {
+        border-radius: 50%; 
+        width: 1em ; 
+        height: 1em;
+        background-color: #00a0ff;
+        position: relative;
+            margin-bottom: 12px;
+        display: inline-block;
+    
+    }
+    
+    .btn_minus:before {
+        content: "\f068";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+    /*--adjust as necessary--*/
+        color: #fff;
+        font-size: 12px;
+        padding-right: 0.5em;
+        position: absolute;
+        top: 3px;
+        left: 4px;
+    }
+    .btn_plus {
+        border-radius: 50%; 
+        width: 1em ; 
+        height: 1em;
+        background-color: #00a0ff;
+        position: relative;
+        display: inline-block;
+        margin-top: 55px;
+        margin-bottom: 12px;
+    }
+    
+    .btn_plus:before {
+        content: "\f067";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+    /*--adjust as necessary--*/
+        color: #fff;
+        font-size: 12px;
+        padding-right: 0.5em;
+        position: absolute;
+        top: 3px;
+        left: 5px;
+    }
+    .q5-result{
+        width: 225px; 
+        height: 37px; 
+        background: url(../../public/secret/q5-result.png) no-repeat 0 0; 
+        text-align: center;
+        line-height: 37px;
+        margin: 0 auto;
+    }
+    .value-label{
+        position: relative;
+        text-align: center;
+        padding-top: 3px;
+        top: -38px;
+        left: -26px;
+        color: #fff;
+        background: url(../../public/secret/q5-slide.png) no-repeat;
+        background-size: contain;
+        width: 70px;
+        height: 49px;
+        font-size: 12px;
+    
+    }
+    .smalltext{
+        font-size: 14px; 
+        margin: 0 20px;
+    }
+    .subhead{
+        color: $maintextcolor; 
+        margin: 20px 0 0 20px;
+    }
+    .tnc{
+        font-size: 14px;
+        margin: 0 40px 20px;
+    }
+    .secret_7{
+        span{
+            font-size: 14px;
+        }
+    }
+    .secret-submit-button{
+        width: 180px;
+        height: 40px;
+        border-radius: 20px 20px;
+        background-color: $maintextcolor;
+        text-align: center;
+        color: #fff;
+        line-height: 40px;
+        font-size: 18px;
+        margin: 0 auto; 
+       
+        ::first-letter {
+            letter-spacing: 1em;
+        }
+    }
+    .secret-submit-button::first-letter{
+        letter-spacing: 1em;
+    }
+
+    .help-block{
+        text-align: right;
+        color: red;
+    }
+
+    
+}
+.help-block{
+    line-height: 1.3em;
+    text-align: right;
+    color: red;
+}
+
+.polaroid-container{
+    position: relative;
+    width: 640px;
+    margin: 0 auto;
+    margin-top: -157px; 
+    z-index: 3;
+    min-height: 60vw;
+    @media screen and (max-width: $break-small) {
+        width: 80%;
+        margin-top: -13vw; 
+        min-height: 90vw;
+    } 
+    .polaroid{
+       float:left;
+       position: relative;
+        width: 50%;
+        img{
+            position: absolute;
+            width: 100%;
+        }
+    }
+    #polaroid2017 img{
+        transform: rotate(-5deg);
+    }
+    #polaroid2016 img{
+        left: 100%;
+        top: 30px;
+        transform: rotate(6deg);
+    }
+    #polaroid2015 img{
+        top: 362px;
+        transform: rotate(5deg);
+        @media screen and (max-width: $break-small) {
+            top: 44vw;
+        } 
+    }
+    #polaroid2014 img{
+        top: 400px;
+        left: 100%;
+        transform: rotate(-5deg);
+        @media screen and (max-width: $break-small) {
+            top: 49vw;
+        } 
+    }
+}
+
+.result-content-container{
+    position:relative; 
+    margin: 0 auto;
+    width: 640px;
+    min-height: 550px; 
+    z-index: 20;
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+        margin-top: -1vh; 
+    }
+}
+
+.event-content-container{
+    position:relative; 
+    margin: 0 auto;
+    width: 900px;
+    min-height: 550px; 
+    z-index: 20;
+    background-color: #fff8e3;
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+        margin-top: -1vh; 
+    }
+}
+.eventboxCon{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center ;    
+    padding-bottom: 20px;
+}
+.eventbox{
+    background: #fff;
+    width: 45%; 
+    margin: 10px; 
+    a{
+        text-decoration: none;
+    }
+    img{
+        width: 100%;
+    }
+    p{
+        text-align: center;
+    }
+    .winner-title{
+        margin: 10px;
+        p{
+            color: $maintextcolor;
+            margin: 0px;
+        }
+    }
+}
+
+.advercontainer {
+    background-color: #fff8e3;
+    font-size: 16px;
+    width: 640px;
+    margin: 50px auto;
+    margin-top: -2vh;
+    z-index: 20;
+    position: relative;
+    @media screen and (max-width: $break-small) {
+        width: 90%;
+    }
+    .logo_apm{
+        background: url(../../public/history/logo_apm.png) no-repeat center center;
+    }
+    .logo_hollywood{
+        background: url(../../public/history/logo_hollywood.png) no-repeat center center;
+        background-size: 30%;
+    }
+    .logo_popcorn{
+        background: url(../../public/history/logo_popcorn.png) no-repeat center center;
+    }
+    .logo_telford{
+        background: url(../../public/history/logo_telford.png) no-repeat center center;
+    }
+    .logo_top{
+        background: url(../../public/event/top.png) no-repeat center center;
+    }
+    .logo_paradise{
+        background: url(../../public/event/paradise.png) no-repeat center center;
+    }
+    .logo_langham{
+        background: url(../../public/event/langham.png) no-repeat center center;
+    }
+    .logo_vcity{
+        background: url(../../public/event/vcity.png) no-repeat center center;
+    }
+}
+.photo{
+  width: 100%;
+}
+.adv-header{
+    display: flex;
+    justify-content: flex-start;
+    .backbtn{
+        flex-shrink: 0;
+        margin: 30px 10px;
+        width: 20%;
+        a{
+            color: $maintextcolor;
+        }
+        img{
+            width:100%;
+        }
+    }
+    
+    .logo{
+        width: 80%;
+        img{
+            width:100%;
+        }
+        @media screen and (max-width: $break-small) {
+            width: 90%;
+        }
+    }
+}
+.adv-video{
+    width: 100%;
+}
+
+.advertorialBody{
+
+    padding: 20px 15px;
+    .caption{
+        font-size: 14px;
+    }
+    h3{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top:2em;
+    }
+}

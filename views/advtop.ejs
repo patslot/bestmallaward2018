@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bestmallApp">
+<head>
+<%- include('header.ejs') %>
+</head>
+
+<body ng-controller="homepageCon">
+<div class="fixedcloud"></div>
+    <div class="container">
+         <%- include('nav.ejs', {section: 'result'}) %>    
+    </div>
+    <div class="visual-container cloud">
+        <img src="cloud1.png" alt="" srcset="" style="right: 100px;">
+        <img src="cloud2.png" alt="" srcset="" style="left: 100px;">
+        <img src="cloud3.png" alt="" srcset="" style="right: 100px;">
+    </div>
+    <div class="container-fuild  d-xl-none mobile-visual">
+     <img class="img-fluid" src="mobile_event_main.png" alt="" srcset="">  
+    </div>
+    <div class="section-visual-container  d-none d-xl-block">
+        <div class="visual">
+            <img id="main" src="event_main.png" alt="" srcset=""> 
+            <div id='starcontainer'></div>
+        </div> 
+    </div>
+        <div class="advercontainer" data-velocity=".9" >
+            <div class="adv-header logo_top">
+                <div class="backbtn">
+                    <a href='../event'>
+                        <img src='btn_back.png'>
+                    </a>
+                </div>
+            </div>
+            <div class="adv-video">
+                    <div id="video_player"></div>
+            </div>
+            
+            <div class="advertorialBody">
+                <p>一年一度的動MALL王大獎又來到，一班動MALL女已經依照動MALL王派出的指令，四出於各商場進行神秘任務！T.O.P致力以手機應用程式連繫商場、商戶及顧客，增強線上線下 (O2O)的互動，難怪會榮獲Apple Daily Digital頒發的「最佳O2O客戶體驗動MALL王大獎」！</p>
+                <img class="photo" src="top_1.jpg">
+                <p class="caption">集年輕、活力、動感及帶領潮流於一身的全新旺角地標T.O.P。</p>
+                <p>連接港鐵旺角站B4出口的T.O.P This is Our Place 於去年6月開始試業，銳意打造成旺角潮流新地標。T.O.P App除了擁有增加購物體驗的基本功能外，還特別加入社交元素，令顧客間可透過App認識志同道合的朋友，更可分享潮流服飾和美食相片，增加大家的交流。 </p>
+                <img class="photo" src="top_2.jpg">
+                <p class="caption">T.O.P App內的「單身狗約食區」可邀請新朋友一起吃飯逛街。</p>
+                <p>商場不僅齊集日、韓、台、西班牙等知名品牌，更引入多間首次登陸香港的食肆及全新概念的連鎖店，更以Pop-up store形式不定時引入貼近潮流的特式產品，迎合年青客群多變的口味。</p>
+                <img class="photo" src="top_3.jpg">
+                <p class="caption">除了食、買、玩之外，愛Hea一族更可以在這裏無限hea，盡情chill。 </p>
+                <p>T.O.P與Graffiti藝術家CARA合作，創作了一幅Graffiti wall，成為商場內一個最受歡迎的打卡位。另外亦為後樓梯加上不同Graffiti，製造了一條場內的健康路線，鼓勵城市人多做運動。</p>
+            </div>
+        </div>  
+        <%- include('footer.ejs') %>
+        <%- include('videoUtil.ejs') %>
+        <%- include('./animation/event.ejs') %>
+       <script>
+                  var videodetail1 = {
+                    videoId : "bestmallawards2017video1",
+                    url : "https://campaign.nextdigital.com.hk/video_sales/bestmallawards/top_2018_v2.mp4",
+                };
+                var videoTitle1 = "Best Mall Awards 2018";
+                var elementId1 = "video_player";
+            
+              
+                renderVideo(videodetail1, videoTitle1, elementId1); 
+                
+       </script>
+</body>
+
+</html>

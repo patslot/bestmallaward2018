@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bestmallApp">
+<head>
+<%- include('header.ejs') %>
+</head>
+
+<body ng-controller="homepageCon">
+<div class="fixedcloud"></div>
+    <div class="container">
+         <%- include('nav.ejs', {section: 'result'}) %>    
+    </div>
+    <div class="visual-container cloud">
+        <img src="cloud1.png" alt="" srcset="" style="right: 100px;">
+        <img src="cloud2.png" alt="" srcset="" style="left: 100px;">
+        <img src="cloud3.png" alt="" srcset="" style="right: 100px;">
+    </div>
+    <div class="container-fuild  d-xl-none mobile-visual">
+     <img class="img-fluid" src="mobile_event_main.png" alt="" srcset="">  
+    </div>
+    <div class="section-visual-container  d-none d-xl-block">
+        <div class="visual">
+            <img id="main" src="event_main.png" alt="" srcset=""> 
+            <div id='starcontainer'></div>
+        </div> 
+    </div>
+        <div class="advercontainer" data-velocity=".9" >
+            <div class="adv-header logo_langham">
+                <div class="backbtn">
+                    <a href='../event'>
+                        <img src='btn_back.png'>
+                    </a>
+                </div>
+            </div>
+            <div class="adv-video">
+                    <div id="video_player"></div>
+            </div>
+            
+            <div class="advertorialBody">
+                <p>一年一度的動MALL王大獎又來到，一班動MALL女已經依照動MALL王派出的指令，四出於各商場進行神秘任務！樓高15層的朗豪坊不但是九龍區的潮流地標，也是充滿特色食肆的開飯熱點。場內齊集中西日韓台越泰菜，滋味食肆遍佈各個樓層，讓顧客隨時隨地可以品嚐特色本地薑及小店精心炮製的美食，難怪會榮獲Apple Daily Digital頒發的「最多滋味動MALL王大獎」！</p>
+                <img class="photo" src="langham_1.jpg">
+                <p class="caption">朗豪坊擁有超過200間商戶及4DX戲院CINEMA CITY，集購物丶娛樂及餐飲設施於一身，為城中型人的潮流熱點。</p>
+                <img class="photo" src="langham_2.jpg">
+                <p class="caption">商場餐飲極之多元化，有由本地薑悉心經營的特色小店，亦有著名的連鎖餐廳，更有不少特色飲品及甜品，無論是情侶約會、朋友聚會還是一家大小家庭樂，都必定有合口味的餐廳。</p>
+                <p>朗豪坊引入多間新餐廳，包括Oh My Goose!（陳記）、火車頭越南餐室、Texas Burger、LAB10 with juice lab、Cup of…等本地薑及特色小店、更有首次進駐商場的丸十寿司日本食堂，讓顧客有更多不同選擇。</p>
+                <img class="photo" src="langham_3.jpg">
+                <p class="caption">丸十寿司日本食堂的香葱鮪魚蓉海膽丼入面的米飯是由日本入口的玄米在店內即場打磨而成，配以新鮮的香葱鮪魚蓉及海膽，每一口都是非一般的享受！</p>
+                <img class="photo" src="langham_4.jpg">
+                <p class="caption">Oh My Goose!的黯然銷魂飯有肥美香口的叉燒加上蛋汁撈飯，色香味俱全，怎會不人見人愛？</p>
+                <img class="photo" src="langham_5.jpg">
+                <p class="caption">被譽為全港十大最佳漢堡餐廳Texas Burger，德州燒烤牛肉漢堡的漢堡扒又大塊又Juicy，配上香脆可口的薯條，漢堡控不能錯過 ！</p>
+                <img class="photo" src="langham_6.jpg">
+                <p class="caption">LAB10 with juice lab的二人份量牛牛板齊集靚牛七大部位，仲有健康果汁飲，食幾多都無問題！</p>
+                <img class="photo" src="langham_7.jpg">
+                <p class="caption">Cup of……的重量級More More茶份量十足，茶香味醇之餘更可品嚐多款水果粒，解渴又健康！</p>
+                <p>另外4樓美食廣場經翻新後環境煥然一新，顧客可在更舒適的環境享受滋味的美食。場內更增設免費充電設施，讓顧客邊用餐邊「餵飽」電話，即使一個人食飯都不會怕悶。</p>
+                <img class="photo" src="langham_8.jpg">
+                <p class="caption">全新升級的Food Court環境更舒適、設備更齊全。</p>
+            </div>
+        </div>  
+        <%- include('footer.ejs') %>
+        <%- include('videoUtil.ejs') %>
+        <%- include('./animation/event.ejs') %>
+       <script>
+                  var videodetail1 = {
+                    videoId : "bestmallawards2017video1",
+                    url : "https://campaign.nextdigital.com.hk/video_sales/bestmallawards/langham_2018.mp4",
+                };
+                var videoTitle1 = "Best Mall Awards 2018";
+                var elementId1 = "video_player";
+            
+              
+                renderVideo(videodetail1, videoTitle1, elementId1); 
+                
+       </script>
+</body>
+
+</html>

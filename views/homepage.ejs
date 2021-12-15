@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bestmallApp">
+<head>
+<%- include('header.ejs') %>
+</head>
+
+<body ng-controller="homepageCon">
+<div style="position: fixed; z-index: -1;">
+        <img src="cloud_bg2.png" class="parallax" data-velocity="0.8">
+</div>
+<div class="fixedcloud"></div>
+    <%- include('nav.ejs', {section: 'homepage'}) %>    
+<div class="visual-container ">
+    <div class="cloud"></div>
+       
+</div>
+<div class="container-fuild  d-xl-none mobile-visual">
+         <img class="img-fluid" src="mobile_visual.png" alt="" srcset="">  
+       
+</div>
+<div class="container d-none d-xl-block" style="position:relative; min-height: 850px;">
+           <div class="visual-container"><img class="animated infinite tada" id="logo1" src="logo1.png" alt="" srcset=""></div>   
+           <div class="visual-container"><img class="animated infinite tada" id="logo3" src="logo3.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img class="animated infinite tada" id="logo2" src="logo2.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="logo4" src="logo4.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="dog3" src="dog3.png" alt="" srcset=""></div>   
+           <div class="visual-container"><img id="dog2" src="dog2.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="visual" src="visual2.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="building1" src="building1.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="building2" src="building2.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img class="animated bounce infinite slow delay-2s" id="glasses" src="glasses.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="tail" src="tail.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="tram" src="tram.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img class="animated flipInX delay-2s" id="point1" src="point1.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img class="animated flipInX delay-3s" id="point2" src="point1.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img class="animated flipInX delay-5s" id="heart1" src="heart1.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img class="animated infinite tada" id="heart2" src="heart2.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img class="animated infinite tada delay-2s" id="heart3" src="heart2.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img class="animated infinite tada delay-5s" id="heart4" src="heart2.png" alt="" srcset=""></div> 
+
+           <div class="visual-container"><img class="animated infinite tada" id="heart5" src="heart2.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img class="animated infinite tada delay-2s" id="heart6" src="heart2.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img class="animated infinite tada delay-5s" id="heart7" src="heart2.png" alt="" srcset=""></div> 
+
+           <div class="visual-container"><img id="popcorn1" src="popcorn1.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="popcorn2" src="popcorn2.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="popcorn3" src="popcorn3.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="popcorn4" src="popcorn4.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="popcorn5" src="popcorn1.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="popcorn6" src="popcorn2.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="popcorn7" src="popcorn3.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="popcorn8" src="popcorn4.png" alt="" srcset=""></div>
+           <div class="visual-container" id="popcorncontainer"></div>
+
+           <div class="visual-container"><img id="car1" src="car1.png" alt="" srcset=""></div> 
+           <div class="visual-container"><img id="car2" src="car2.png" alt="" srcset=""></div> 
+          
+    </div>
+    <div class="section_container">
+        <div class="section_row">
+            <div class="empty"></div>
+            <div class="section " id="section1" ><a href="/detail"><img class="img-fluid parallax scrolly-invisible"  data-velocity="0.8" src="section2.png" alt="" srcset=""></a></div>
+            <div class="section "><a href="/public"><img class="img-fluid parallax" data-velocity="-0.6" src="section4.png" alt="" srcset=""></a></div>
+            <div class="section "><a href="/result"><img class="img-fluid parallax" data-velocity="0.4" src="section6.png" alt="" srcset=""></a></div>
+        </div>
+        <div class="section_row">
+             <div class="section" data-velocity="0.80"><a href="/secret"><img class="img-fluid parallax"  data-velocity="0.8" src="section3.png" alt="" srcset=""></a></div>
+            <div class="section" data-velocity="0.40"><a href="/event"><img class="img-fluid parallax"  data-velocity="0.8" src="section7.png" alt="" srcset=""></a></div>
+            <div class="section "><a href="/history"><img class="img-fluid parallax" data-velocity="0.2" src="section8.png" alt="" srcset=""></a></div>
+        </div>
+    </div> 
+    <div id="nominateformcontainer" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                </button>
+            <div class="modal-header">
+                <h5 class="modal-title">提名十大我最喜愛動MALL王大獎</h5>
+            </div>
+             <div class="modal-body">
+                 <div id="nomiateformcontainer" ng-show="!submitsuccess">
+                    <form id="nominateform" name="nominateform"  method="post" novalidate autocomplete="off" enctype="multipart/form-data"> 
+                        <fieldset>
+                            <legend>商場名稱（中／英）</legend>
+                            <div class="field">
+                                <input type="text" name="name" ng-model="name" ng-init="name = '商場名稱'" ng-focus="name = ''" ng-pattern="/[^\u5546\u5834\u540d\u7a31]{4}/" required> 
+                                <p ng-show="nominateform.name.$invalid && submitted" class="help-block">請輸入正確的商場名稱</p>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>商場網址</legend>
+                            <div class="field">
+                            <input type="text" name="url" ng-model="url" ng-init="url = '商場網址'" ng-focus="url = ''" ng-pattern="/(http(s)?://)?([\w-]+\.)+[\w-]+(/[\w- ;,./?%&=]*)?/" required> 
+                            <p ng-show="nominateform.url.$invalid && submitted" class="help-block">請輸入正確的商場網址</p>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>商場facebook網址</legend>
+                            <div class="field">
+                            <input type="text" name="fburl" ng-model="fburl" ng-init="fburl = '商場facebook網址'" ng-focus="fburl = ''" ng-pattern="/(http(s)?://)?([\w-]+\.)+[\w-]+(/[\w- ;,./?%&=]*)?/" required> 
+                            <p ng-show="nominateform.fburl.$invalid && submitted" class="help-block">請輸入正確的商場facebook網址</p>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>100字簡介</legend>
+                            <div class="field2">
+                            <textarea rows="3" cols="50" name="description" ng-model="description" ng-init="description = '100字簡介'" ng-focus="description = ''" ng-pattern="/[^100\u5b57\u7c21\u4ecb]{6}/" ng-maxlength="100" required> </textarea>
+                            <p ng-show="nominateform.description.$invalid && submitted" class="help-block">請輸入100字的簡介</p>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>商場圖片<span style="font-size: 0.5em;">(上載的檔案必需在1MB以下。)</span></legend>
+                            <div class="field3">
+                            <button ngf-select ng-model="picFile" accept="image/*">上傳圖片</button> 
+                            <p ng-show="!validphoto && submitted" class="help-block">圖片檔案不能大於1MB</p>
+                                <div class="photopreview">
+                                    <button type="button" id="photopreviewclose" class="close" ng-show="picFile" accept="image/*" ng-click="clearPhotoPreview()" >
+                                            <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img ng-src="{{picFile  | ngfDataUrl}}" />
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <a ng-click="nominateFormSubmit()" id="btn_submit" ng-disabled="nominateform.$invalid">
+                                <div class="secret-submit-button">提交</div>
+                            </a>
+                        </fieldset>
+                     </form>
+                </div>
+                <div id="nomiateformthankyou" ng-show="submitsuccess">
+                    <p>我們已收到閣下的提名，將會有專人盡快處理。多謝。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <%- include('footer.ejs') %>
+
+    <%- include('./animation/homepage.ejs') %>
+
+    <script>
+        $('.parallax').scrolly();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bestmallApp">
+<head>
+<%- include('header.ejs') %>
+</head>
+
+<body ng-controller="homepageCon">
+<div class="fixedcloud"></div>
+    <div class="container">
+         <%- include('nav.ejs', {section: 'result'}) %>    
+    </div>
+    <div class="visual-container cloud">
+        <img src="cloud1.png" alt="" srcset="" style="right: 100px;">
+        <img src="cloud2.png" alt="" srcset="" style="left: 100px;">
+        <img src="cloud3.png" alt="" srcset="" style="right: 100px;">
+    </div>
+    <div class="container-fuild  d-xl-none mobile-visual">
+     <img class="img-fluid" src="mobile_event_main.png" alt="" srcset="">  
+    </div>
+    <div class="section-visual-container  d-none d-xl-block">
+        <div class="visual">
+            <img id="main" src="event_main.png" alt="" srcset=""> 
+            <div id='starcontainer'></div>
+        </div> 
+    </div>
+        <div class="event-content-container" data-velocity=".9" >
+                <div class="formbox1">
+                    <div class="history-title">
+                        <img src="title-2018.png"> 
+                    </div>   
+                </div>
+                <div class="eventboxCon">
+                    <div class="eventbox">
+                        <a href="hollywood">
+                            <div class="eventbox-pic">
+                                <img src="hollywood_feature2.jpg">
+                            </div>
+                            <div class="winner-logo">
+                                <img src="hollywood.png">
+                            </div>
+                            <div class="winner-title">
+                                <p>最佳親子動MALL王大獎</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="eventbox">
+                        <a href="telford">
+                            <div class="eventbox-pic">
+                            <img src="telford_feature.jpg">
+                            </div>
+                            <div class="winner-logo">
+                                <img src="telford.png">
+                            </div>
+                            <div class="winner-title">
+                                <p>最多元化購物動MALL王大獎
+                                </p>
+                                <p>十大我最喜愛動MALL王大獎</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="eventbox">
+                        <a href="popcorn">
+                            <div class="eventbox-pic">
+                            <img src="popcorn_feature.jpg">
+                            </div>
+                            <div class="winner-logo">
+                                <img src="popcorn.png">
+                            </div>
+                            <div class="winner-title">
+                                <p>最潮活力動MALL王大獎</p>
+                                <p>十大我最喜愛動MALL王大獎</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="eventbox">
+                         <a href="paradise">
+                            <div class="eventbox-pic">
+                            <img src="paradise_feature.jpg">
+                            </div>
+                            <div class="winner-logo">
+                                <img src="paradise.png">
+                            </div>
+                            <div class="winner-title">
+                                <p>最佳Outlet體驗動MALL王大獎</p>
+                            </div>
+                        </a>    
+                    </div>
+                    <div class="eventbox">
+                        <a href="langham">
+                            <div class="eventbox-pic">
+                                <img src="langham_feature.jpg">
+                            </div>
+                            <div class="winner-logo">
+                                <img src="langham.png">
+                            </div>
+                            <div class="winner-title">
+                                <p>最多滋味動MALL王大獎</p>
+                                <p>十大我最喜愛動MALL王大獎</p>
+                            </div>
+                        </a>
+                    </div>
+                <div class="eventbox">
+                    <a href="apm">
+                        <div class="eventbox-pic">
+                        <img src="apm_feature.jpg">
+                        </div>
+                        <div class="winner-logo">
+                            <img src="apm.png">
+                        </div>
+                        <div class="winner-title">
+                            <p>最佳玩樂享受動MALL王大獎</p>
+                            <p>十大我最喜愛動MALL王大獎</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="eventbox">
+                    <a href="vcity">
+                        <div class="eventbox-pic">
+                        <img src="vcity_feature.jpg">
+                        </div>
+                        <div class="winner-logo">
+                            <img src="vcity.png">
+                        </div>
+                        <div class="winner-title">
+                            <p>最新科技互動動MALL王大獎</p>
+                            <p>最佳商場服務大獎</p>
+                        </div>
+                    </a>    
+                </div>
+                <div class="eventbox">
+                    <a href="top">
+                        <div class="eventbox-pic">
+                        <img src="top_feature.jpg">
+                        </div>
+                        <div class="winner-logo">
+                            <img src="top.png">
+                        </div>
+                        <div class="winner-title">
+                            <p>最佳O2O客戶體驗動MALL王大獎</p>
+                        </div>
+                    </a>    
+                </div>
+                    <div class="eventbox">
+                        <a href="#">
+                            <div class="eventbox-pic">
+                            <img src="k11_feature.jpg">
+                            </div>
+                            <div class="winner-logo">
+                                <img src="k11.png">
+                            </div>
+                            <div class="winner-title">
+                                <p>最具藝術文化動MALL王大獎</p>
+                                <p>最佳社交媒體推廣大獎</p>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+        </div>  
+        <%- include('footer.ejs') %>
+        <%- include('videoUtil.ejs') %>
+        <%- include('./animation/event.ejs') %>
+       
+</body>
+
+</html>
